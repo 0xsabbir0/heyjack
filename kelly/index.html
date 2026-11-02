@@ -1,1 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelly Services | Job Opportunities</title>
+  <style>
+    :root {
+      --green: #398313;
+      --dark-green: #247b45;
+      --light: #ffffff;
+      --text: #202820;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: #f3f6f1;
+    }
+    .topbar {
+      background: var(--light);
+      padding: 22px 16px;
+      text-align: center;
+      border-bottom: 4px solid var(--green);
+    }
+    .logo {
+      display: block;
+      width: min(100%, 520px);
+      max-height: 210px;
+      object-fit: contain;
+      margin: 0 auto;
+    }
+    main {
+      width: min(100% - 28px, 760px);
+      margin: 28px auto 40px;
+    }
+    .intro {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .intro h1 {
+      margin: 0 0 10px;
+      color: var(--dark-green);
+      font-size: clamp(25px, 5vw, 38px);
+      line-height: 1.15;
+    }
+    .intro p {
+      margin: 0;
+      color: #4a5548;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+    .poster-wrap {
+      background: white;
+      border-radius: 14px;
+      padding: 10px;
+      box-shadow: 0 8px 28px rgba(0,0,0,.10);
+    }
+    .poster {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .apply-area {
+      text-align: center;
+      padding: 25px 12px 10px;
+    }
+    .apply-button {
+      display: inline-block;
+      min-width: 210px;
+      padding: 16px 30px;
+      border-radius: 999px;
+      background: var(--green);
+      color: white;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: .5px;
+      box-shadow: 0 5px 0 #28620e;
+      transition: transform .15s ease, background .15s ease;
+    }
+    .apply-button:hover { background: #2f710f; transform: translateY(-2px); }
+    .apply-button:active { transform: translateY(1px); box-shadow: 0 3px 0 #28620e; }
+    .hint {
+      margin: 14px auto 0;
+      color: #5a6558;
+      font-size: 13px;
+      line-height: 1.45;
+    }
+    footer {
+      text-align: center;
+      padding: 18px 12px 28px;
+      color: #687166;
+      font-size: 12px;
+    }
+    @media (max-width: 480px) {
+      .topbar { padding: 14px 12px; }
+      main { width: min(100% - 18px, 760px); margin-top: 18px; }
+      .poster-wrap { padding: 6px; border-radius: 10px; }
+      .apply-button { width: 100%; max-width: 320px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <!-- Replace logo.jpg with your first image's exact filename -->
+    <img class="logo" src="logo.jpg" alt="Kelly Services logo">
+  </header>
 
+  <main>
+    <section class="intro">
+      <h1>Job Opportunities</h1>
+      <p>Explore the opportunity shown below and apply using the button.</p>
+    </section>
+
+    <section class="poster-wrap" aria-label="Job offer poster">
+      <!-- Replace poster.jpg with your second image's exact filename -->
+      <img class="poster" src="poster.jpg" alt="Kelly Services job opportunity poster">
+    </section>
+
+    <div class="apply-area">
+      <!-- Add your application URL between the quotes below when ready -->
+      <a class="apply-button" href="YOUR_APPLICATION_LINK_HERE" id="applyButton" target="_blank" rel="noopener noreferrer">
+        APPLY NOW
+      </a>
+      <p class="hint" id="linkHint">To add your link later, replace YOUR_APPLICATION_LINK_HERE in this HTML file with your application URL.</p>
+    </div>
+  </main>
+
+  <footer>Job opportunity information shown in the supplied poster.</footer>
+
+  <script>
+    // Prevent the placeholder from opening until you add your real link.
+    document.getElementById("applyButton").addEventListener("click", function (event) {
+      if (this.getAttribute("href") === "YOUR_APPLICATION_LINK_HERE") {
+        event.preventDefault();
+        alert("Please add your application link in the HTML file first.");
+      }
+    });
+  </script>
+</body>
+</html>
